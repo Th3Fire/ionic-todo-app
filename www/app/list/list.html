@@ -1,0 +1,12 @@
+<ion-view>
+    <ion-content ng-controller="TodoCtrl as todoCtrl">
+        <ul class="list">
+            <li class="item item-checkbox" ng-repeat="list in todoCtrl.data">
+                {{list.todo}}
+                <label class="checkbox">
+                        <input type="checkbox">
+                    </label>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>
