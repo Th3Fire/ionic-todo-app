@@ -1,0 +1,34 @@
+<ion-view>
+    <ion-content ng-controller="TodoCtrl as todoCtrl">
+        <div class="row responsive-md">
+            <div class="col col-75">
+                <label class="item item-input">
+                    <input type="text" placeholder="What needs to be done?" ng-model="todoCtrl.input">
+                </label>
+            </div>
+            <div class="col col-15 text-center">
+                <button class="button button-positive button-full icon-center ion-plus" ng-click="todoCtrl.add()">Add</button>
+            </div>
+            <!--
+            <div class="list card" ng-show="todoCtrl.data.length > 0">
+                <div class="item item-text-wrap" ng-repeat="list in todoCtrl.data">
+                    <li class="item item-checkbox">
+                        {{list.todo}}
+                        <label class="checkbox">
+                    <input type="checkbox">
+                    </label>
+                    </li>
+                </div>
+            </div>-->
+
+            <ul class="list">
+                <li class="item item-checkbox" ng-repeat="list in todoCtrl.data">
+                    {{list.todo}}
+                    <label class="checkbox">
+                        <input type="checkbox">
+                    </label>
+                </li>
+            </ul>
+
+    </ion-content>
+</ion-view>
